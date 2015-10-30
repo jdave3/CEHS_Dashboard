@@ -1,0 +1,121 @@
+.pageheader {
+	background-color: #2D5E95;
+	text-align: center;
+	font-size: 35px;
+	font-family: "Times New Roman";
+	color: #FFFFFF;
+	border-radius: 25px 25px 0px 0px;
+}
+
+body {
+	background-color: #E9EAED;
+	font-family: "Times New Roman";
+	font-size: 17px;
+	color: #2D5E95;
+	border:2px solid black;
+	border-radius: 25px 25px 0px 0px;
+}
+
+a:link {
+    color: green;
+}
+
+.pagename
+{
+	float:center; 
+	border-top:2px solid black;border-bottom:2px solid black;
+	font-family: "Times New Roman";
+	font-size: 17px;
+}
+
+h2 {
+	font-family: "Times New Roman";
+	font-size: 20px;
+	font-style: italic;
+}
+
+table {
+				table-layout:fixed;
+				width:100%;
+                border-collapse: collapse;
+                border: 2px black solid;
+                font: 12px sans-serif;
+				align: center;
+}
+            td {
+                border: 1px black solid;
+                padding: 5px;
+				overflow:hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+            }
+			th {
+                border: 1px black solid;
+                padding: 5px;
+				word-wrap:break-word
+            }
+			tr{
+				height:1em;
+			}
+
+.imagediv{
+	float:left; 
+	border-right:2px solid black;
+	border-bottom:2px solid black; 
+	padding: 10px;
+}
+
+.contentDiv{
+	overflow: hidden;
+	padding-left: 2px
+}
+
+.container{
+	padding: 10px;
+}
+
+.options{
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+
+.zoom{
+	font-size: 20px;
+}
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+div.tooltip {
+  position: absolute;	
+  text-align: center;	
+  width: 160px;	
+  height: 15px;		
+  padding: 1px;	
+  font: 12px sans-serif;	
+  background: #820000;	
+  border: 0px;					
+  border-radius: 8px;
+	
+}
+
+
+
