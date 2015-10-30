@@ -1,0 +1,8 @@
+Schedule and deliverable for Low Ball Target:
+
+- Design site navigation theme with site ID and utilities -- Mon 11/02 by 5pm (estimate: 3 hrs)
+- Parser code for delimited input data -- Mon 11/02 by 5pm (estimate: 1 hrs)
+- Tabular display of delimited input data -- Wed 11/4 by 5pm (estimate: 2 hrs)
+- Filter data option with search button along with tabular display -- Fri 11/06 by 5pm (estimate: 4 hrs)
+- Arranging the site display for tabular layout -- Sun 11/08 by 10am (estimate: 1 hrs)
+- Testing tabular layout and Navigation theme with filters -- Sun 11/08 by 1pm (estimate: 4 hrs)
