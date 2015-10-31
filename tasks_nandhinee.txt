@@ -1,0 +1,8 @@
+Task number		Tasks															 Date	Completion time	Expected number of hours
+1				Over all page layout and parsing the input data					11/1/2015	5:00 PM			3
+2				Produce state map												11/3/2015	5:00 PM			2
+3				Apply calculations												11/5/2015	5:00 PM			3
+4				Button click  to display table									11/6/2015	5:00 PM			2
+5				Produce tool tip and apply color codings						11/7/2015	5:00 PM			1
+6				Validate all the filters and check for the corresponding output	11/8/2015	3:00 PM			5
+																									Total	16
