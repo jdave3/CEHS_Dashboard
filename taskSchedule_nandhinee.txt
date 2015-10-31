@@ -1,0 +1,11 @@
+Low ball target - deliverables and target
+
+Task no		Tasks											Expected completion time		Total Hours required
+1. 		Parsing the input data								Sunday 2015/11/01 by 5 pm 			3
+2. 		Produce state map									Tuesday 2015/11/03 by 5pm			2
+3. 		Apply calculations									Thursday 2015/11/05 by 5pm			3
+4. 		Button click for to display table					Friday 2015/11/06 by 5 pm			2
+5. 		Produce tool tip and apply color codings			Saturday 2015/11/07 by 5 pm			2
+6. 		Testing												Sunday 2015/11/08 by 3 pm			4
+																			Total				16
+																			
