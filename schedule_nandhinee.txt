@@ -1,0 +1,10 @@
+Low ball target - deliverables and target
+
+1. Parsing the input data-Sunday 2015/11/01 by 5 pm-3 hrs
+2. Produce state map-Tuesday 2015/11/03 by 5pm-2 hrs
+3. Apply calculations-Thursday 2015/11/05 by 5pm-3 hrs
+4. Button click for to display table-Friday 2015/11/06 by 5 pm-2 hrs
+5. Produce tool tip and apply color codings-Saturday 2015/11/07 by 5 pm-2 hrs
+6. Testing-Sunday 2015/11/08 by 3 pm-4 hrs
+					Total				16hrs
+																			
