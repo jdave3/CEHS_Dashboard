@@ -36,11 +36,12 @@ h2 {
 
 table {
 				table-layout:fixed;
-				width:100%;
+				width:auto;
                 border-collapse: collapse;
                 border: 2px black solid;
-                font: 12px sans-serif;
+                font: 14px sans-serif;
 				align: center;
+				
 }
             td {
                 border: 1px black solid;
@@ -58,6 +59,7 @@ table {
 				height:1em;
 			}
 
+		
 .imagediv{
 	float:left; 
 	border-right:2px solid black;
@@ -117,5 +119,9 @@ div.tooltip {
 	
 }
 
+#loading { display: none; }
 
+.odd{background-color: white;} 
+
+.even{background-color: gray;}
 

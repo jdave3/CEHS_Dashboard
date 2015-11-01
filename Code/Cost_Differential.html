@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+  <head>
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/Navigation.css">
+    <script type="text/javascript" src="js/lib/d3.min.js"></script>
+		<div class = "pageheader">
+			CEHS Dashboard
+		</div>
+		<div id='cssmenu'>
+			<ul>
+			<li><a href='tabluar_view_try.html'>Tabular Display</a></li>
+			<li><a href='State_Map.html'>State Map</a></li>
+			<li class='active'><a href='#'>Cost Differential</a></li>
+			</ul>
+		</div>
+  </head>
+  <body>
+	<!--<div>
+		<div>
+			<form action="">
+			<fieldset>
+				<legend>Filters:</legend>
+				Body Part:
+				<input type="text" name="firstname" value="">
+				<br>
+				Legal Indicator: 
+				<input type="radio" name="LegalInd" value="Litigated" checked>Litigated
+				<input type="radio" name="LegalInd" value="Non-Litigated">Non-Litigated
+				<input type="radio" name="LegalInd" value="All">All
+				<br>
+				State:
+				<select>
+					<option value=""></option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Wisconsin">Wisconsin</option>
+				</select>
+				<br>
+				Year:
+				<select>
+					<option value=""></option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+				</select>
+				<br><br>
+				<input type="submit" value="Submit">
+			</fieldset>
+			</form>
+		</div>
+		<div id= "tablecontainer" align = 'center' style="padding:40px;">
+			<script type="text/javascript">
+				var tabulate = function (data,columns) {
+				var table = d3.select('#tablecontainer').append('table')
+					var thead = table.append('thead')
+					var tbody = table.append('tbody')
+				
+					thead.append('tr')
+					.selectAll('th')
+						.data(columns)
+						.enter()
+					.append('th')
+						.text(function (d) { return d })
+				
+					var rows = tbody.selectAll('tr')
+						.data(data)
+						.enter()
+					.append('tr').style("background",function(d,i){
+						if(i%2==0) return '#CC9999';
+						else  return'#9999CC';
+					})
+				
+					var cells = rows.selectAll('td')
+						.data(function(row) {
+							return columns.map(function (column) {
+								return { column: column, value: row[column] }
+						})
+					})
+					.enter()
+					.append('td')
+					.text(function (d) { return d.value })
+				
+				return table;
+				}
+				
+				d3.csv('CEHS_Dashboard_data_dev1.csv',function (data) {
+					var columns = ['Claim_Number','Encrypted_SCMS_ClientID','VendorID','State','Date_of_Loss','Body_Part','Legal_Indicator','Incurred_Indemnity','Incurred_Medical','Incurred_Expense']
+				tabulate(data,columns)
+				})
+			</script>
+		</div>
+	</div>
+	<br>
+	-->
+  </body>
+</html>
