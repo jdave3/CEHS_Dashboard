@@ -62,10 +62,10 @@
 				
 				var tblrows = document.getElementsByTagName('tr');
 
-				for(i=0;i<tblrows.length;i++){
-					if(i%2==0) tblrows[i].style.backgroundColor = '#f22000';
-					else tblrows[i].style.backgroundColor = '#a02141';
-				}
+				.append('tr').style("background",function(d,i){
+						if(i%2==0) return '#CC9999';
+						else  return'#9999CC';
+					})
 				
 				//document.getElementById('loading').style.display = 'none';
 			</script>

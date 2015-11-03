@@ -4,7 +4,19 @@
   <head>
 	<link rel="stylesheet" href="css/mystyle.css">
 	<link rel="stylesheet" href="css/Navigation.css">
+	
+	<!--D3 -->
     <script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	<!--Jquery -->
+	<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	
+	<!--Boot Strap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 		<div class = "pageheader">
 			CEHS Dashboard
 		</div>
@@ -17,8 +29,8 @@
 		</div>
   </head>
   <body>
-	<div>
-		<div>
+	<div class="container-fluid">
+		<div class = "row">
 			<form action="">
 			<fieldset>
 				<legend>Filters:</legend>
@@ -26,9 +38,9 @@
 				<input type="text" name="firstname" value="">
 				<br>
 				Legal Indicator: 
-				<input type="radio" name="LegalInd" value="Litigated" checked>Litigated
-				<input type="radio" name="LegalInd" value="Non-Litigated">Non-Litigated
-				<input type="radio" name="LegalInd" value="All">All
+				<input type="radio" name="LegalInd" value="Litigated" >Litigated
+				<input type="radio" name="LegalInd" value="Non-Litigated" >Non-Litigated
+				<input type="radio" name="LegalInd" value="All" checked>All
 				<br>
 				State:
 				<select>
@@ -57,12 +69,37 @@
 			</fieldset>
 			</form>
 		</div>
-		<div id= "tablecontainer" align = 'center' style="padding:40px;">
+
+		<div id= "tablecontainer" class = "row" style= "border: 2px red solid;">
 			<script type="text/javascript">
+			// Change the selector if needed
+			var $table = $('table.mytableclass'),
+				$bodyCells = $table.find('tbody tr:first').children(),
+				colWidth;
+			
+			// Adjust the width of thead cells when window resizes
+			$(window).resize(function() {
+				// Get the tbody columns width array
+				colWidth = $bodyCells.map(function() {
+					return $(this).width();
+				}).get();
+				
+				// Set the width of thead columns
+				$table.find('thead tr').children().each(function(i, v) {
+					$(v).width(colWidth[i]);
+				});    
+			}).resize(); // Trigger resize handler
+			
+			
+			
 				var tabulate = function (data,columns) {
-				var table = d3.select('#tablecontainer').append('table')
-					var thead = table.append('thead')
-					var tbody = table.append('tbody')
+				var tablehead = d3.select('#tablecontainer')
+							.append('div')
+							.attr("class","panel panel-default")
+							.append('table')
+							.attr("id","mytable")
+							.attr("class","table table-bordered mytableclass")
+					var thead = tablehead.append('thead')
 				
 					thead.append('tr')
 					.selectAll('th')
@@ -70,15 +107,18 @@
 						.enter()
 					.append('th')
 						.text(function (d) { return d })
-				
+					
+				var tablebody = d3.select('#tablecontainer')
+							.append('div')
+							.attr("class","div-table-content")
+							.append('table')
+							.attr("id","mytable")
+							.attr("class","table table-hover table-bordered mytableclass")	
+					var tbody = tablebody.append('tbody')
 					var rows = tbody.selectAll('tr')
 						.data(data)
 						.enter()
-					.append('tr').style("background",function(d,i){
-						if(i%2==0) return '#CC9999';
-						else  return'#9999CC';
-					})
-				
+					.append('tr')
 					var cells = rows.selectAll('td')
 						.data(function(row) {
 							return columns.map(function (column) {
@@ -89,12 +129,33 @@
 					.append('td')
 					.text(function (d) { return d.value })
 				
-				return table;
+				return tablebody;
 				}
+
 				
 				d3.csv('CEHS_Dashboard_data_dev1.csv',function (data) {
 					var columns = ['Claim_Number','Encrypted_SCMS_ClientID','VendorID','State','Date_of_Loss','Body_Part','Legal_Indicator','Incurred_Indemnity','Incurred_Medical','Incurred_Expense']
-				tabulate(data,columns)
+				
+				
+				var input_LegalInd = d3.select('input[name="LegalInd"]:checked').node().value;
+				console.log(input_LegalInd);
+				
+				var nested_LegalInd = null;	
+				
+				if(input_LegalInd == "Litigated"){
+					var filtereddata = data.filter(function(d){return d.Legal_Indicator == "Y"});
+				
+				}else if(input_LegalInd == "Non-Litigated"){
+					
+					var filtereddata = data.filter(function(d){return d.Legal_Indicator == "N"});
+
+				}else{
+					var filtereddata = data;
+				}
+				console.log(filtereddata);
+				tabulate(filtereddata,columns);
+				
+				
 				})
 			</script>
 		</div>
