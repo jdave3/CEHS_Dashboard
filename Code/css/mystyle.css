@@ -6,6 +6,8 @@
 	font-family: "Times New Roman";
 	color: #FFFFFF;
 	border-radius: 25px 25px 0px 0px;
+	padding: 5px;
+	padding-right: 50px;
 }
 
 body {
@@ -16,6 +18,7 @@ body {
 	color: #2D5E95;
 	border:2px solid black;
 	border-radius: 25px 25px 0px 0px;
+	padding: 5px;
 }
 
 a:link {
@@ -110,7 +113,7 @@ table {
 }
 
 .div-table-content {
-  height:150px;
+  height:270px;
   overflow-y:auto;
   overflow-x: hidden;
   
@@ -151,7 +154,6 @@ table {
     width: 10%;
     float: left;
 	overflow:hidden;
-
 }
 
 .table>thead>tr>th {
@@ -159,8 +161,9 @@ table {
     line-height: 1.42857143!important;
     vertical-align: top!important;
     border-top: 1px solid #ddd!important;
-		word-wrap:break-word!important;
-				text-overflow: ellipsis!important;
+	word-wrap:break-word!important;
+	text-overflow: ellipsis!important;
+	background-color:#EDECE9!important;
 }
 
 .panel {
@@ -171,14 +174,13 @@ table {
     border-radius: 4px!important;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05)!important;
     box-shadow: 0 1px 1px rgba(0,0,0,.05)!important;
-
+}	
 .table>tbody>tr>td {
     padding: 8px!important;
     line-height: 1.42857143!important;
     vertical-align: top!important;
     border-top: 1px solid #ddd!important;
-	word-wrap:break-word!important;
-				text-overflow: ellipsis!important;
+	word-break: break-all!important;
 }
 
 	

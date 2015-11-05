@@ -35,7 +35,7 @@
 			<div>
 			<script type="text/javascript">
 				//document.getElementById('loading').style.display = '';
-				d3.text("sample1610.csv", function (datasetText) {
+				d3.text("CEHS_Dashboard_data_table.csv", function (datasetText) {
 				var rows = d3.csv.parseRows(datasetText);
 				var tbl = d3.select("#tablecontainer")
 					.append("table")

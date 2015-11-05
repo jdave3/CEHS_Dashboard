@@ -109,7 +109,7 @@ function d3Tutorial(){
 	})
 
 	//loading the json file
-	d3.json("us-states.json", function(json) {
+	d3.json("midwest-states.json", function(json) {
 	    
        //binding GeoJson to path element
 		svg.selectAll("path")

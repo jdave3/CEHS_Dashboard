@@ -133,8 +133,8 @@
 				}
 
 				
-				d3.csv('CEHS_Dashboard_data_dev1.csv',function (data) {
-					var columns = ['Claim_Number','Encrypted_SCMS_ClientID','VendorID','State','Date_of_Loss','Body_Part','Legal_Indicator','Incurred_Indemnity','Incurred_Medical','Incurred_Expense']
+				d3.csv('CEHS_Dashboard_data_table.csv',function (data) {
+					var columns = ['Claim_Number','ClientID','VendorID','State','Claim_Type','Date_of_Loss','Body_Part','Legal_Indicator','Indemnity_Cost','Medical_Cost','Expense_Cost']
 				
 				
 				var input_LegalInd = d3.select('input[name="LegalInd"]:checked').node().value;
