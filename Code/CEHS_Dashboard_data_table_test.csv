@@ -1,0 +1,51 @@
+Claim_Number,ClientID,VendorID,State,Claim_Type,Date_of_Loss,Body_Part,Legal_Indicator,Indemnity_Cost,Medical_Cost,Expense_Cost
+WC100768228       ,3705,EIC,Indiana             ,MO,20100518,Multiple Body Parts                               ,N,0.00,369.28,0.00
+WC100768362       ,3705,EIC,Wisconsin           ,MO,20100825,Upper Extremities                                 ,N,0.00,1281.30,65.76
+WC100768515       ,3705,EIC,Kentucky            ,IN,20100913,Upper Extremities                                 ,N,14128.16,19614.66,1092.17
+WC100768589       ,3705,EIC,Wisconsin           ,MO,20100401,Upper Extremities                                 ,N,0.00,2001.01,88.58
+WC100768687       ,3705,EIC,Missouri            ,MO,20100825,Lower Extremities                                 ,N,0.00,224.33,47.19
+WC100799623       ,3705,EIC,Illinois            ,MO,20110419,Upper Extremities                                 ,N,0.00,502.19,6.00
+WC100799798       ,3705,EIC,Illinois            ,MO,20110408,Upper Extremities                                 ,N,0.00,1035.15,70.90
+WC100799817       ,3705,EIC,Kentucky            ,MO,20110331,Head                                              ,N,0.00,75.00,6.00
+301207732150001   ,3705,IFN,Michigan            ,MO,20120615,Neck                                              ,N,0.00,1173.67,68.70
+301207739840001   ,3705,IFN,Kentucky            ,MO,20120726,Upper Extremities                                 ,N,0.00,809.04,96.36
+301207742210001   ,3705,IFN,Kentucky            ,MO,20120726,Trunk                                             ,N,0.00,92.98,7.00
+301207747060001   ,3705,IFN,Michigan            ,MO,20120629,Trunk                                             ,N,0.00,1953.85,49.00
+301207759770001   ,3705,IFN,Missouri            ,MO,20120727,Trunk                                             ,N,0.00,372.82,31.93
+301207807430001   ,3705,IFN,Kentucky            ,MO,20120628,Multiple Body Parts                               ,N,0.00,232.23,7.00
+301207812680001   ,3705,IFN,Wisconsin           ,MO,20120727,Multiple Body Parts                               ,N,0.00,4287.03,150.02
+301207824450001   ,3705,IFN,Illinois            ,MO,20120730,Upper Extremities                                 ,N,0.00,410.37,40.92
+301207838990001   ,3705,IFN,Kentucky            ,IN,20120715,Upper Extremities                                 ,N,357.19,3581.48,242.14
+301207840480001   ,3705,IFN,Kentucky            ,MO,20120730,Lower Extremities                                 ,N,0.00,337.71,7.00
+301207843650001   ,3705,IFN,Kentucky            ,MO,20120724,Upper Extremities                                 ,N,0.00,1095.48,55.43
+301208025050001   ,3705,IFN,Illinois            ,MO,20120316,Upper Extremities                                 ,N,0.00,3822.37,62.28
+301208034980001   ,3705,IFN,Wisconsin           ,IN,20120712,Lower Extremities                                 ,N,0.00,0.00,7.90
+301208036040001   ,3705,IFN,Kentucky            ,MO,20120201,Upper Extremities                                 ,N,0.00,778.20,80.74
+301208059660001   ,3705,IFN,Wisconsin           ,MO,20120805,Trunk                                             ,N,0.00,876.43,24.94
+301208060620001   ,3705,IFN,Indiana             ,MO,20120806,Lower Extremities                                 ,N,0.00,433.77,14.00
+301208063800001   ,3705,IFN,Missouri            ,MO,20120806,Upper Extremities                                 ,N,0.00,3321.47,156.76
+301208083780001   ,3705,IFN,Kentucky            ,MO,20120731,Trunk                                             ,N,0.00,539.67,26.64
+301208100130001   ,3705,IFN,Indiana             ,MO,20120807,Upper Extremities                                 ,N,0.00,311.72,7.00
+301208102890001   ,3705,IFN,Kentucky            ,MO,20120724,Upper Extremities                                 ,N,0.00,325.85,21.00
+301208105230001   ,3705,IFN,Illinois            ,IN,20120804,Lower Extremities                                 ,N,102.24,11973.36,307.92
+301208111310001   ,3705,IFN,Kentucky            ,MO,20120805,Head                                              ,N,0.00,571.95,17.35
+301208122830001   ,3705,IFN,Kentucky            ,MO,20120807,Lower Extremities                                 ,N,0.00,337.53,7.00
+301208138070001   ,3705,IFN,Kentucky            ,MO,20120808,Head                                              ,N,0.00,146.85,7.00
+301208138970001   ,3705,IFN,Illinois            ,IN,20120725,Lower Extremities                                 ,N,455.85,5155.25,118.12
+301208149720001   ,3705,IFN,Kentucky            ,MO,20120724,Trunk                                             ,N,0.00,92.98,7.00
+301208175700001   ,3705,IFN,Kentucky            ,MO,20120806,Trunk                                             ,N,0.00,742.85,50.15
+301208180360001   ,3705,IFN,Kentucky            ,MO,20120806,Lower Extremities                                 ,N,0.00,224.30,10.95
+301208191540001   ,3705,IFN,Indiana             ,MO,20120809,Multiple Body Parts                               ,N,0.00,877.35,28.00
+301208194030001   ,3705,IFN,Kentucky            ,MO,20120718,Upper Extremities                                 ,N,0.00,512.09,42.24
+301208232020001   ,3705,IFN,Kentucky            ,MO,20120807,Neck                                              ,N,0.00,0.00,7.00
+B118109167000101  ,7130,000,Michigan            ,MO,20110429,Head                                              ,N,0.00,989.13,16.03
+A918106330000101  ,7130,000,Missouri            ,IN,20090521,Lower Extremities                                 ,Y,12058.76,1742.30,9164.40
+A918106332000101  ,7130,000,Missouri            ,IN,20090529,Upper Extremities                                 ,Y,14082.17,2610.94,357.74
+A918106335000101  ,7130,000,Michigan            ,MO,20090529,Upper Extremities                                 ,N,0.00,527.29,24.61
+A918106344000101  ,7130,000,Missouri            ,IN,20090507,Upper Extremities                                 ,Y,35830.76,30944.93,6505.19
+A918103226000101  ,7130,000,Michigan            ,IN,20090317,Upper Extremities                                 ,Y,92912.87,3443.23,3612.56
+A918103233000101  ,7130,000,Michigan            ,IN,20081218,Upper Extremities                                 ,Y,35000.00,3472.07,4429.17
+A918106642000101  ,7130,000,Michigan            ,IN,20080701,Upper Extremities                                 ,Y,48494.95,2152.97,4060.38
+A918106658000101  ,7130,000,Michigan            ,MO,20090610,Head                                              ,N,0.00,130.00,7.50
+A918106662000101  ,7130,000,Michigan            ,MO,20081008,Lower Extremities                                 ,N,0.00,820.03,7.50
+301005980930001   ,6793,IFN,Indiana             ,IN,20100128,Upper Extremities                                 ,Y,6500.00,0.00,1062.50

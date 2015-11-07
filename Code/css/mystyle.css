@@ -20,7 +20,9 @@ body {
 	border-radius: 25px 25px 0px 0px;
 	padding: 5px;
 }
-
+html{
+		margin:5px;	
+}
 a:link {
     color: green;
 }
@@ -185,17 +187,6 @@ table {
 
 	
 	
-.imagediv{
-	float:left; 
-	border-right:2px solid black;
-	border-bottom:2px solid black; 
-	padding: 10px;
-}
-
-.contentDiv{
-	overflow: hidden;
-	padding-left: 2px
-}
 
 .container{
 	padding: 10px;
@@ -250,3 +241,30 @@ div.tooltip {
 
 .even{background-color: gray;}
 
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+
+	.states {
+        	fill: #aaa;
+        	stroke: #fff;
+        	stroke-width: 0.75px;
+	}
+	#map {
+		margin:2%;
+		padding:20px;
+		border:2px solid #d0d0d0;
+		border-radius: 5px;
+	}
