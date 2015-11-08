@@ -6,10 +6,30 @@
 	font-family: "Times New Roman";
 	color: #FFFFFF;
 	border-radius: 25px 25px 0px 0px;
-	padding: 5px;
+	padding: 2px;
 	padding-right: 50px;
 }
-
+.tagline {
+	background-color: #2D5E95;
+	text-align: center;
+	width: 100%;
+	font-size: 25px;
+	font-family: "Times New Roman";
+	color: #FFFFFF;
+	border-radius: 0px 0px 0px 0px;
+	padding: 2px;
+	padding-right: 50px;
+}
+head {
+	background-color: #E9EAED;
+	width: 100%;
+	font-family: "Times New Roman";
+	font-size: 17px;
+	color: #2D5E95;
+	border:2px solid black;
+	border-radius: 25px 25px 0px 0px;
+	padding: 5px;
+}
 body {
 	background-color: #E9EAED;
 	width: 100%;
@@ -157,7 +177,16 @@ table {
     float: left;
 	overflow:hidden;
 }
-
+.table>tr>th
+{
+	padding: 8px!important;
+    line-height: 1.42857143!important;
+    vertical-align: top!important;
+    border-top: 1px solid #ddd!important;
+	word-wrap:break-word!important;
+	text-overflow: ellipsis!important;
+	background-color:#EDECE9!important;
+}
 .table>thead>tr>th {
     padding: 8px!important;
     line-height: 1.42857143!important;
@@ -186,8 +215,55 @@ table {
 }
 
 	
+#tooltiptable
+{
 	
+}
+.Aboutdiv{
+	background-color: #2D5E95;
+	opacity: 0.75;
+	text-align: left;
+	width: 100%;
+	font-size: 30px;
+	font-family: "Times New Roman";
+	color: #FFFFFF;
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 15px;
+	padding-right: 50px;
+	
+}
+.answer1{
+	border-style:solid;
+	border-top:none;
+	border-color:#A9A9A9;
+	border-radius: 5px 5px 5px 5px;
+	font-size: 25px;
+	color: #2D5E95;
+	text-align:justify;
+}
 
+.question2{
+	background-color: #2D5E95;
+	opacity: 0.75;
+	text-align: left;
+	width: 100%;
+	font-size: 30px;
+	font-family: "Times New Roman";
+	color: #FFFFFF;
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 15px;
+	padding-right: 50px;
+	
+}
+.answer2{
+	border-style:solid;
+	border-top:none;
+	border-color:#A9A9A9;
+	border-radius: 5px 5px 5px 5px;
+	font-size: 25px;
+	color: #2D5E95;
+	text-align:justify;
+}
 .container{
 	padding: 10px;
 }
@@ -219,19 +295,21 @@ table {
   color: rgba(0, 0, 0, 0.8);
   content: "\25BC";
   position: absolute;
-  text-align: center;
+  text-align: left;
 }
+
+
 
 div.tooltip {
   position: absolute;	
   text-align: center;	
-  width: 160px;	
-  height: 15px;		
+  width: auto;	
+  height: auto;		
   padding: 1px;	
-  font: 12px sans-serif;	
+  font: 14px sans-serif;	
   background: #820000;	
   border: 0px;					
-  border-radius: 8px;
+  border-radius: 4px;
 	
 }
 
