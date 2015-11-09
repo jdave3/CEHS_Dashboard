@@ -1,24 +1,40 @@
 .pageheader {
 	background-color: #2D5E95;
-	text-align: center;
+	text-align: left;
 	width: 100%;
-	font-size: 35px;
-	font-family: "Times New Roman";
+	font-size: 25px;
+	font-family: "Arial";
 	color: #FFFFFF;
 	border-radius: 25px 25px 0px 0px;
 	padding: 2px;
 	padding-right: 50px;
+	/*background-image:url("../Images/background.png");*/
 }
 .tagline {
 	background-color: #2D5E95;
-	text-align: center;
+	text-align: left;
 	width: 100%;
-	font-size: 25px;
-	font-family: "Times New Roman";
-	color: #FFFFFF;
+	margin-left: 2%;
+	font-size: 45%;
+	font-family: "Arial";
+	font-weight: bold;
+	color: #d2a16a;
 	border-radius: 0px 0px 0px 0px;
-	padding: 2px;
 	padding-right: 50px;
+}
+#filtertablediv
+{
+	background-color: #E9EAED;	
+}
+#filtertable{
+	background-color: #E9EAED!important;	
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 0em!important;
+    border-top: 0;
+    overflow: auto;
+    zoom: 1;
 }
 head {
 	background-color: #E9EAED;
@@ -195,6 +211,8 @@ table {
 	word-wrap:break-word!important;
 	text-overflow: ellipsis!important;
 	background-color:#EDECE9!important;
+	text-align: center!important;
+	
 }
 
 .panel {
@@ -231,38 +249,6 @@ table {
 	margin-top: 15px;
 	padding-right: 50px;
 	
-}
-.answer1{
-	border-style:solid;
-	border-top:none;
-	border-color:#A9A9A9;
-	border-radius: 5px 5px 5px 5px;
-	font-size: 25px;
-	color: #2D5E95;
-	text-align:justify;
-}
-
-.question2{
-	background-color: #2D5E95;
-	opacity: 0.75;
-	text-align: left;
-	width: 100%;
-	font-size: 30px;
-	font-family: "Times New Roman";
-	color: #FFFFFF;
-	border-radius: 5px 5px 5px 5px;
-	margin-top: 15px;
-	padding-right: 50px;
-	
-}
-.answer2{
-	border-style:solid;
-	border-top:none;
-	border-color:#A9A9A9;
-	border-radius: 5px 5px 5px 5px;
-	font-size: 25px;
-	color: #2D5E95;
-	text-align:justify;
 }
 .container{
 	padding: 10px;
@@ -307,7 +293,7 @@ div.tooltip {
   height: auto;		
   padding: 1px;	
   font: 14px sans-serif;	
-  background: #820000;	
+  background: #FFFFCC;	
   border: 0px;					
   border-radius: 4px;
 	

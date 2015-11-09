@@ -148,18 +148,18 @@ function d3Tutorial(){
 					+"<br>Total_Medical_Cost:"+nested_statewise[j].values.total_Medical_Cost
 					+"<br>Total_Expense_Cost:"+nested_statewise[j].values.total_Expense_Cost
 					);*/
-					tip.html("<table id = 'tooltiptable' border='2'><tr><th colspan='2' style>"+nested_statewise[j].key+"</th></tr>"+
-					"<tr><td>Total_Claims:</td>"+
+					tip.html("<table id = 'tooltiptable' border='2'><tr><th align='center' colspan='2' style>"+nested_statewise[j].key+"</th></tr>"+
+					"<tr><td>Total Cases:</td>"+
 					"<td>"+nested_statewise[j].values.total_count+"</td></tr>"+
 					"<tr><td>Litigated Cases:</td>"+
 					"<td>"+nested_statewise[j].values.litigated_count+"</td></tr>"+
 					"<tr><td>Non-Litigated Cases</td>"+
 					"<td>"+nested_statewise[j].values.nonlitigated_count+"</td></tr>"+
-					"<tr><td>Total_Indemnity_Cost:</td>"+
+					"<tr><td>Total Indemnity Cost:</td>"+
 					"<td>"+nested_statewise[j].values.total_Indemnity_Cost+"</td></tr>"+
-					"<tr><td>Total_Medical_Cost:</td>"+
+					"<tr><td>Total Medical Cost:</td>"+
 					"<td>"+nested_statewise[j].values.total_Medical_Cost+"</td></tr>"+
-					"<tr><td>Total_Expense_Cost:</td>"+
+					"<tr><td>Total Expense Cost:</td>"+
 					"<td>"+nested_statewise[j].values.total_Expense_Cost+"</td></tr>"+
 					"</table>"
 					);
@@ -171,7 +171,7 @@ function d3Tutorial(){
 		*/
 		
 			tip.style("left", (d3.event.pageX) + "px")
-			.style("color","white")			
+			.style("color","black")			
 			.style("top", (d3.event.pageY - 25) + "px");	
 		})
 		
@@ -215,6 +215,7 @@ function makeTableHTML() {
 	var tab = d3.select("#map")	
 					.append("div")
 					.attr("id","tableHolder")
+					.attr("class","tableHolderclass")
 					.style("float","right");
 	
     var result = "<table id = 'statetable' border=1 class='table table-bordered  table-hover mytableclass'>";
@@ -244,7 +245,5 @@ function makeTableHTML() {
 	$("#statetable").remove();
 	tab.html(result);
 	
-	$("button").click(function(){
-    $("table").toggle();
-	});
+	
 }

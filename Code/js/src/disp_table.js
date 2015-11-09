@@ -1,5 +1,6 @@
 var source_data = [];
 var columns = ['Claim_Number','ClientID','VendorID','State','Claim_Type','Date_of_Loss','Body_Part','Legal_Indicator','Indemnity_Cost','Medical_Cost','Expense_Cost'];
+var disp_columns = ['Claim Number','Client ID','Vendor ID','State','Claim Type','Date of Loss','Body Part','Legal Indicator','Indemnity Cost','Medical Cost','Expense Cost'];
 function disp_table()
 {
 			var $table = $('table.mytableclass'),
@@ -59,7 +60,7 @@ function tabulate(data,columns) {
 				
 					thead.append('tr')
 					.selectAll('th')
-						.data(columns)
+						.data(disp_columns)
 						.enter()
 					.append('th')
 						.text(function (d) { return d })
