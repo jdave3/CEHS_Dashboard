@@ -44,7 +44,7 @@ function d3Tutorial(){
 								.attr("x","10")
 								//.attr("height", init_height)
 								//.attr("transform","scale($("#map").width()/900)")
-								//.style("m.append("g");argin-left","50%")
+								.append("g");
 								
 	
 
@@ -204,9 +204,9 @@ function d3Tutorial(){
     sizeChange();
 }
 function sizeChange() {
-	    d3.select("g").attr("transform", "scale(" + $("#map").width()/900 + ") translate(" + $("#map").width()*-1/4+")");
+	    d3.select("g").attr("transform", "scale(" + $("#map").width()/1000 + ") translate(" + $("#map").width()*-1/5+")");
 		//d3.select("g").attr("transform","translate(" + $("#map").width()/40+","+$("#map").height()/30+")");
-	    $("svg").height($("#map").width()*0.3);
+	    $("svg").height($("#map").width()*0.36);
 		console.log($("#map").width()*-1/40);
 		console.log("called");
 }
@@ -218,8 +218,8 @@ function makeTableHTML() {
 					.attr("class","tableHolderclass")
 					.style("float","right");
 	
-    var result = "<table id = 'statetable' border=1 class='table table-bordered  table-hover mytableclass'>";
-		result += "<tr style = 'background-color:#EDECE9'>";
+    var result = "<hr style= 'border-top: 1px solid #123455;'><table id = 'statetable' border=1 class='table table-bordered  table-hover mytableclass'>";
+		result += "<tr style = 'background-color:#d9d8d5'>";
 		result += "<th>Rank</th>";
 		result += "<th>State</th>";
 		result += "<th>Total Cases</th>";
@@ -243,6 +243,7 @@ function makeTableHTML() {
     }
     result += "</table>";
 	$("#statetable").remove();
+	console.log(result);
 	tab.html(result);
 	
 	

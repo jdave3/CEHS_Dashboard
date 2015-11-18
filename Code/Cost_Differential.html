@@ -4,12 +4,27 @@
   <head>
 	<link rel="stylesheet" href="css/mystyle.css">
 	<link rel="stylesheet" href="css/Navigation.css">
+	
+	<!--D3 -->
     <script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	
+	<!--Jquery -->
+	<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+	<script type="text/javascript" src="js/src/statemap.js"></script>
+	
+	<script type="text/javascript" src="js/src/cost_differential.js"></script>
 	
 	<!--Boot Strap -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	
 		<div class = "pageheader">
 			<div class = "row">
@@ -31,97 +46,84 @@
 			<ul>
 			<li><a href='tabluar_view_try.html'>Tabular Display</a></li>
 			<li><a href='State_Map.html'>State Map</a></li>
+			<li><a href='State_Map_HIGHCHARTS.html'>State_Map_HIGHCHARTS</a></li>
 			<li class='active'><a href='#'>Cost Differential</a></li>
 			<li class=><a href='help.html'>Help</a></li>
 			</ul>
 		</div>
   </head>
-  <body>
+  <body onload='Load_data();'>
   <br>
-  <img src="Images/workinprogress.png" style="height:285px;width:300px;border:2px solid black; border-radius: 15px;">
-	<!--<div>
-		<div>
-			<form action="">
-			<fieldset>
-				<legend>Filters:</legend>
-				Body Part:
-				<input type="text" name="firstname" value="">
-				<br>
-				Legal Indicator: 
-				<input type="radio" name="LegalInd" value="Litigated" checked>Litigated
-				<input type="radio" name="LegalInd" value="Non-Litigated">Non-Litigated
-				<input type="radio" name="LegalInd" value="All">All
-				<br>
-				State:
-				<select>
-					<option value=""></option>
-					<option value="Illinois">Illinois</option>
-					<option value="Indiana">Indiana</option>
-					<option value="Iowa">Iowa</option>
-					<option value="Kentucky">Kentucky</option>
-					<option value="Michigan">Michigan</option>
-					<option value="Missouri">Missouri</option>
-					<option value="Wisconsin">Wisconsin</option>
+  <div class="container-fluid">
+		
+		
+		<div class = "row">
+			<!--<form>
+			<fieldset>-->
+
+			<div style= "float:left; border:2px solid black;overflow: none;">
+			<b>Filters:</b>
+			<hr style= "border-top: 1px solid #123455;">
+				Claim type:<br>
+				<input type="radio" name="LegalInd" value="Y" >Litigated
+				<input type="radio" name="LegalInd" value="N" >Non-Litigated
+				<input type="radio" name="LegalInd" value="All" checked>All
+				
+			<hr style= "border-top: 1px solid #123455;">
+				Body Part: 
+				<select id = "bodypart_dropdown">
+					<option value="All">All</option
+					<option value="Upper Extremities">Upper Extremities</option>
+					<option value="Lower Extremities">Lower Extremities</option>
+					<option value="Head">Head</option>
+					<option value="Neck">Neck</option>
+					<option value="Trunk">Trunk</option>
+					<option value="Multiple Body Parts">Multiple Body Parts</option>
 				</select>
-				<br>
-				Year:
-				<select>
-					<option value=""></option>
-					<option value="2008">2008</option>
-					<option value="2009">2009</option>
-					<option value="2010">2010</option>
-					<option value="2011">2011</option>
-					<option value="2012">2012</option>
-					<option value="2013">2013</option>
+			<hr style= "border-top: 1px solid #123455;">
+				X-Axis: 
+				<select id = "x_dropdown">
+					<option value="Indemnity_Cost" selected="selected">Indemnity_Cost</option>
+					<option value="Medical_Cost">Medical_Cost</option>
+					<option value="Expense_Cost">Expense_Cost</option>
+					<option value="IndAndMed_Cost">IndAndMed_Cost</option>
+					<option value="IndAndExp_Cost">IndAndExp_Cost</option>
+					<option value="MedAndExp_Cost">MedAndExp_Cost</option>
+					<option value="Total_Cost">Total_Cost</option>
 				</select>
 				<br><br>
-				<input type="submit" value="Submit">
-			</fieldset>
-			</form>
-		</div>
-		<div id= "tablecontainer" align = 'center' style="padding:40px;">
-			<script type="text/javascript">
-				var tabulate = function (data,columns) {
-				var table = d3.select('#tablecontainer').append('table')
-					var thead = table.append('thead')
-					var tbody = table.append('tbody')
+				Y-Axis: 
+				<select id = "y_dropdown">
+					<option value="Indemnity_Cost">Indemnity_Cost</option>
+					<option value="Medical_Cost" selected="selected">Medical_Cost</option>
+					<option value="Expense_Cost">Expense_Cost</option>
+					<option value="IndAndMed_Cost">IndAndMed_Cost</option>
+					<option value="IndAndExp_Cost">IndAndExp_Cost</option>
+					<option value="MedAndExp_Cost">MedAndExp_Cost</option>
+					<option value="Total_Cost">Total_Cost</option>
+				</select>
+			<hr style= "border-top: 1px solid #123455;">
 				
-					thead.append('tr')
-					.selectAll('th')
-						.data(columns)
-						.enter()
-					.append('th')
-						.text(function (d) { return d })
-				
-					var rows = tbody.selectAll('tr')
-						.data(data)
-						.enter()
-					.append('tr').style("background",function(d,i){
-						if(i%2==0) return '#CC9999';
-						else  return'#9999CC';
-					})
-				
-					var cells = rows.selectAll('td')
-						.data(function(row) {
-							return columns.map(function (column) {
-								return { column: column, value: row[column] }
-						})
-					})
-					.enter()
-					.append('td')
-					.text(function (d) { return d.value })
-				
-				return table;
-				}
-				
-				d3.csv('CEHS_Dashboard_data_dev1.csv',function (data) {
-					var columns = ['Claim_Number','Encrypted_SCMS_ClientID','VendorID','State','Date_of_Loss','Body_Part','Legal_Indicator','Incurred_Indemnity','Incurred_Medical','Incurred_Expense']
-				tabulate(data,columns)
-				})
-			</script>
+			
+				<input type="checkbox" name="chk_group" value="Indiana" checked>Indiana<br />
+				<input type="checkbox" name="chk_group" value="Iowa" >Iowa<br />
+				<input type="checkbox" name="chk_group" value="Kentucky" >Kentucky<br />
+				<input type="checkbox" name="chk_group" value="Michigan" >Michigan<br />
+				<input type="checkbox" name="chk_group" value="Missouri" >Missouri<br />
+				<input type="checkbox" name="chk_group" value="Wisconsin" >Wisconsin<br />
+			
+			<hr style= "border-top: 1px solid #123455;">	
+			
+				<input type="button" value="Search" onclick = "filter_data();">
+				<br><br>
+			</div>
+			<!--</fieldset>
+			</form> -->
+			<div id= "scatter_container" style="overflow: hidden; border:2px solid red;">
+				&nbsp&nbsp&nbspLoading Scatter Plot..
+			</div>
 		</div>
 	</div>
-	<br>
-	-->
+  <!--<<img src="Images/workinprogress.png" style="height:285px;width:300px;border:2px solid black; border-radius: 15px;"> -->
   </body>
 </html>

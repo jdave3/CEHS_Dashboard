@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	$('#try').accordion({collapsible: true, active: false});
+	$('#table_filter_option').accordion({collapsible: true, active: false});
 	
 	$('#About').accordion({collapsible: true, active: false});
 	
