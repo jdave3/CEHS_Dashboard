@@ -9,12 +9,12 @@ function makeTableHTML() {
 		result += "<tr style = 'background-color:#d9d8d5'>";
 		result += "<th>Rank</th>";
 		result += "<th>State</th>";
-		result += "<th>Total Cases</th>";
-		result += "<th>Litigated Cases</th>";
-		result += "<th>Non-Litigated Cases</th>";
-		result += "<th>Total Indemnity Cost</th>";
-		result += "<th>Total Medical Cost</th>";
-		result += "<th>Total Expense Cost</th>";		
+		result += "<th>Total Number of Cases</th>";
+		result += "<th>Number of Litigated Cases</th>";
+		result += "<th>Number of Non-Litigated Cases</th>";
+		result += "<th>Total Indemnity Cost in USD</th>";
+		result += "<th>Total Medical Cost in USD</th>";
+		result += "<th>Total Expense Cost in USD</th>";		
         result += "</tr>";
     for(var i=0; i<global_nested_statewise.length; i++) {
         result += "<tr>";
