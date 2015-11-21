@@ -1,6 +1,6 @@
 var source_data = [];
 var columns = ['Claim_Number','ClientID','VendorID','State','Claim_Type','Date_of_Loss','Body_Part','Legal_Indicator','Indemnity_Cost','Medical_Cost','Expense_Cost'];
-var disp_columns = ['Claim Number','Client ID','Vendor ID','State','Claim Type','Date of Loss','Body Part','Legal Indicator','Indemnity Cost','Medical Cost','Expense Cost'];
+var disp_columns = ['Claim Number','Client ID','Vendor ID','State','Claim Type','Date of Loss (YYYY/MM/DD)','Body Part','Legal Indicator (Y/N)','Indemnity Cost (USD)','Medical Cost (USD)','Expense Cost (USD)'];
 function disp_table()
 {
 			var $table = $('table.mytableclass'),
@@ -41,16 +41,16 @@ function disp_table()
 			
 				//console.log(source_data);
 				//console.log("tabulate call");
-				tabulate(source_data,columns);
+				tabulate(source_data,columns,"All","All States","All years","All body parts");
 				})
 				
 				
 				
 }
-function tabulate(data,columns) {
+function tabulate(data,columns, input_LegalInd, input_state, input_year, input_BodyPart) {
 				var tablehead = d3.select('#tablecontainer')
 							.append('div')
-							.text("Records shown:"+data.length)
+							.text("Total Records for "+input_LegalInd+" cases ,"+input_state+" ,"+input_year+" ,"+input_BodyPart+" are "+data.length)
 							.append('div')
 							.attr("class","panel panel-default")
 							.append('table')
@@ -119,7 +119,8 @@ function filter_table()
 	{
 		copy_source_data = copy_source_data.filter(function(d){return d.Body_Part.toLowerCase().indexOf(input_BodyPart.toLowerCase()) > -1});
 	}
-	tabulate(copy_source_data,columns);
+	tabulate(copy_source_data,columns, input_LegalInd, input_state, input_year, input_BodyPart );
+	
 	
 }
 	
