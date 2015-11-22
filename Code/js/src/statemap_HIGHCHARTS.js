@@ -23,7 +23,7 @@ function makeTableHTML() {
 		result += "<td>"+global_nested_statewise[i].total_count+"</td>";
 		result += "<td>"+global_nested_statewise[i].litigated_count+"</td>";
 		result += "<td>"+global_nested_statewise[i].nonlitigated_count+"</td>";
-		result += "<td>"+global_nested_statewise[i].total_Indemnity_Cost+"</td>";
+		result += "<td>"+global_nested_statewise[i].total_Indemnity_Cost.toLocaleString()+"</td>";
 		result += "<td>"+global_nested_statewise[i].total_Medical_Cost+"</td>";
 		result += "<td>"+global_nested_statewise[i].total_Expense_Cost+"</td>";		
         result += "</tr>";
