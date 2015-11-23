@@ -6,3 +6,10 @@ Schedule and deliverable for Low Ball Target:
 - Filter data option with search button along with tabular display -- Fri 11/06 by 5pm (estimate: 4 hrs)
 - Arranging the site display for tabular layout -- Sun 11/08 by 10am (estimate: 1 hrs)
 - Testing tabular layout and Navigation theme with filters -- Sun 11/08 by 1pm (estimate: 4 hrs)
+
+Schedule and deliverable for Mid-Target:
+
+- Create a cost differential graph -- Mon 11/15 by 5pm (estimate: 11 hrs)
+- Make changes to the state map to address previous release issues -- Mon 11/16 by 5pm (estimate: 4 hrs)
+- Create Litigated Vs Non-Litigated comparision map for Illinois state -- Wed 11/20 by 5pm (estimate:11 hrs)
+
