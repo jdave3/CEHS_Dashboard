@@ -1,6 +1,12 @@
 var global_source_data=[];
 var global_illinois_data=[];
 var color_data={};
+function close_tutorial()
+{
+	document.getElementById("tutorial_backscreen").style.display = "none";
+	document.getElementById("tutorial_frontscreen").style.display = "none";
+}
+
 function Load_data()
 {
 				d3.csv('CEHS_Dashboard_data_cost_diff.csv',function (data) {
@@ -157,7 +163,7 @@ function filter_data()
 		}
 	series_data.push({
 				type: 'line',
-				name: 'Illinois Mean',
+				name: 'Illinois '+[input_yaxis]+' Mean',
 				data: [[0, parseFloat(nested_illinois[0].values.ymean)], [max_x, parseFloat(nested_illinois[0].values.ymean)]],
 				marker: {enabled: false},
 				color: '#fb8072',
@@ -167,7 +173,7 @@ function filter_data()
 	
 	series_data.push({
 				type: 'line',
-				name: 'Illinois Mean',
+				name: 'Illinois '+[input_xaxis]+' Mean',
 				data: [[parseFloat(nested_illinois[0].values.xmean), 0], [parseFloat(nested_illinois[0].values.xmean), max_y]],
 				marker: {enabled: false},
 				color: '#fb8072',
@@ -435,7 +441,7 @@ Highcharts.setOptions(Highcharts.theme);
         xAxis: {
             title: {
                 enabled: true,
-                text: input_xaxis
+                text: input_xaxis + ' (in $)'
             },
             startOnTick: true,
             endOnTick: true,
@@ -443,7 +449,7 @@ Highcharts.setOptions(Highcharts.theme);
         },
         yAxis: {
             title: {
-                text: input_yaxis
+                text: input_yaxis + ' (in $)'
             }
         },
         legend: {

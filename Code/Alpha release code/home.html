@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+  <head>
+  <!--CSS-->
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/Navigation.css">
+    
+   <!--Jquery-->
+   <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+
+	<!--Boot Strap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!--Home page scripts-->
+    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="js/lib/js-image-slider.js" type="text/javascript"></script>
+    <link href="css/generic.css" rel="stylesheet" type="text/css" />
+	
+    
+		<div class = "pageheader">
+			<div class = "row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-1">
+				<img src="Images/logo1.png" style="height:85px;border:2px solid black; border-radius: 15px;">
+				</div>
+				<div class="col-md-4">
+					<h1>CEHS Dashboard
+					<br>
+					<div class="tagline">A better way to research</div>
+					</h1>
+				</div>
+
+			</div>
+		</div>
+		<div id='cssmenu'>
+			<ul>
+            <li class='active'><a href='home.html'>Home</a></li>
+			<li><a href='tabluar_view_try'>Tabular Display</a></li>
+			<li><a href='State_Map_HIGHCHARTS.html'>State Map</a></li>
+			<li><a href='Cost_Differential.html'>Cost Differential</a></li>
+			<li><a href='Illinois_LitVsNonlit.html'>Litigated vs Non-Litigated</a></li>
+			<li><a href='BoxPlot.html'>Box Plot</a></li>
+			<li class=><a href='help.html'>Help</a></li>
+			</ul>
+		</div>
+  </head>
+  <body>
+  <br>
+  <div>
+	 
+	  <div id="sliderFrame">
+        <div id="slider">
+            <a href="tabluar_view_try.html" target="_blank">
+                <img src="images/table1.jpg" alt="" />
+            </a>
+            <a class="lazyImage" href="images/state2.jpg" title="">State wise data</a>
+            <a href="Cost_Differential.html"><b data-src="images/cost2.jpg">Cost Differential among states</b></a>
+            <a class="lazyImage" href="images/comp2.jpg" title="">Litigated vs Non Litigated Cost Comparison</a>
+        </div>
+        <!--thumbnails-->
+        <div id="thumbs">
+            <div class="thumb">
+                <!--<div class="frame"><img src="images/thumb1.jpg" /></div>-->
+                <div class="thumb-content"><p>Tabular Data</p>Fill the fields to filter the data you wish to see</div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="thumb">
+                 <!-- <div class="frame"><img src="images/thumb2.jpg" /></div>-->
+                <div class="thumb-content"><p>State Map</p>Want to see which state spends the most for Worker's Compensation?</div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="thumb">
+                  <!--<div class="frame"><img src="images/thumb3.jpg" /></div>-->
+                <div class="thumb-content"><p>Cost Differential</p>Interested to see where Illinois is positioned with respect to it's neighbours?</div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="thumb">
+                 <!-- <div class="frame"><img src="images/thumb4.jpg" /></div>-->
+                <div class="thumb-content"><p>Litigated vs Non-Litigated Cases</p>A detailed timeline of total cost incurred just for Illinois</div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <!--clear above float:left elements. It is required if above #slider is styled as float:left. -->
+        <div style="clear:both;height:0;"></div>
+    </div>
+    <div class="div2">
+		<h3 style="color:#2D5E95"><u>Overview:</u></h3>
+        <p align="justify"><font size="4" color="#2D5E95">The contents of the dashboard include a unique visualization dashboard for the research data at CEHS. This data includes workers’ compensation claims from a Third Party Administrator (TPA) for self-insured companies. Specifically, researchers are looking at the costs of workers’ compensation claims for Illinois and 6 other Midwestern states, and stratifying by whether the workers’ compensation claim was litigated and which body part was injured. This will help them to understand the cost differentials between Illinois and the other states, as well as by injury type within Illinois. Costs being used in this project include lost work time, medical costs, and administrative/legal costs.</font></p>        
+    </div>
+	</div>
+			
+  </body>
+</html>

@@ -2,7 +2,7 @@ var source_data = [];
 var columns = ['Claim_Number','ClientID','VendorID','State','Claim_Type','Date_of_Loss','Body_Part','Legal_Indicator','Indemnity_Cost','Medical_Cost','Expense_Cost'];
 var disp_columns = ['Claim Number','Client ID','Vendor ID','State','Claim Type','Date of Loss (YYYY/MM/DD)','Body Part','Legal Indicator (Y/N)','Indemnity Cost (USD)','Medical Cost (USD)','Expense Cost (USD)'];
 function disp_table()
-{
+{			document.getElementById("searchComplete").innerHTML = "Data is loading: We assure you, it's worth the wait!" ;
 			var $table = $('table.mytableclass'),
 				$bodyCells = $table.find('tbody tr:first').children(),
 				colWidth;

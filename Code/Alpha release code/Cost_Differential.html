@@ -2,6 +2,7 @@
 <meta charset='utf-8'>
 <html>
   <head>
+	<title>Cost Differential</title>
 	<link rel="stylesheet" href="css/mystyle.css">
 	<link rel="stylesheet" href="css/Navigation.css">
 	
@@ -44,6 +45,7 @@
 		</div>
 		<div id='cssmenu'>
 			<ul>
+			<li><a href='home.html'>Home</a></li>
 			<li><a href='tabluar_view_try'>Tabular Display</a></li>
 			<li><a href='State_Map_HIGHCHARTS.html'>State Map</a></li>
 			<li class='active'><a href='Cost_Differential.html'>Cost Differential</a></li>
@@ -55,6 +57,19 @@
   </head>
   <body onload='Load_data();'>
   <br>
+  <div id="tutorial_backscreen" style="width:99%;height:400px;z-index:500;background-color:black;opacity:0.75;position:absolute;margin-bottom:-600px;"></div>
+  <div id="tutorial_frontscreen" style="position:fixed;background-color:white;margin:25%;margin-top:50px;border-radius:4px;z-index:500;margin-bottom:-600px;padding:4px">
+	<h4>&nbspInstructions:</h4>
+	<ol>
+		<li>On the left are the filters which can be applied to filter out the data displayed in visualization.</li>
+		<li>Additionally, filters enable users to select x-axis and y-axis for the graph.</li>
+		<li>Click on the state name below the visualization to select/deselect data for that particular state.</li>
+		<li>With a mouse pointer, the zooming is performed by dragging out a rectangle in the chart.</li>
+		<li>Clicking on save button, enables user to save the visualization displayed on screen.</li>
+	</ol>
+	<center><h5 style="color:red">Note: If you want to revisit these instructions, click on the section named: 'Cost Differential'</h5></center>
+  <center><input type="button" value="close" onclick = "close_tutorial();"></center>
+  </div>
   <div class="container-fluid">
 		
 		
@@ -62,8 +77,8 @@
 			<!--<form>
 			<fieldset>-->
 
-			<div style= "float:left; border:2px solid black;overflow: none;">
-			<b>Filters:</b>
+			<div style= "float:left; border:2px solid black;overflow: none; padding:5px;">
+			<center><b>Filters:</b></center>
 			<hr style= "border-top: 1px solid #123455;">
 				Claim type:<br>
 				<input type="radio" name="LegalInd" value="Y" >Litigated
@@ -118,7 +133,9 @@
 			
 				<input type="button" value="Search" onclick = "filter_data();">
 				<br><br>
+				
 			</div>
+			
 			<!--</fieldset>
 			</form> -->
 			<div id= "scatter_container" style="overflow: hidden;">

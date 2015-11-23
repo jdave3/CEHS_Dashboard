@@ -54,19 +54,22 @@ function showData()
     $('#container').highcharts({
 
         chart: {
-            type: 'boxplot'
+            type: 'boxplot',
+			borderWidth: 2,
+			shadow: false
         },
-
         title: {
-            text: 'Quartile distribution of cost'
+            text: 'Illinois Vs Neighbouring States'
         },
-
+		subtitle: {
+            text: 'Statistical distribution of Total Cost'
+        },
         legend: {
             enabled: false
         },
 
         xAxis: {
-            categories: global_state_names,
+            categories: ['Indiana','Iowa','Kentucky','Michigan','Missouri','Wisconsin'],
             title: {
                 text: 'States'
             }
@@ -74,14 +77,14 @@ function showData()
 
         yAxis: {
             title: {
-                text: 'Cost Incured (USD)'
+                text: 'Total Cost (USD)'
             },
             plotLines: [{
-                value: 1063,
+                value: 9203.17,
                 color: 'red',
                 width: 1,
                 label: {
-                    text: 'ILLINOIS mean: 1063',
+                    text: 'ILLINOIS mean: 9203.17',
                     align: 'center',
                     style: {
                         color: 'gray'
@@ -89,10 +92,32 @@ function showData()
                 }
             }]
         },
-
+		credits: false,
+		exporting: {
+            buttons: {
+                contextButton: {
+					enabled: false
+                },
+                exportButton: {
+                    text: 'Save',
+					theme: {
+						fill:"#E9EAED"
+					},
+                    // Use only the download related menu items from the default context button
+                    menuItems: Highcharts.getOptions().exporting.buttons.contextButton.menuItems.splice(2)
+                }
+            }
+        },
         series: [{
             name: 'Costs (USD)',
-            data: global_source_data,
+            data: [
+                [7000, 8010, 8480, 8950, 9650],
+                [7330, 8530, 9390, 9800, 10800],
+                [7140, 7620, 8170, 8700, 9180],
+                [7240, 8020, 8060, 8710, 9500],
+				[7240, 8020, 8060, 8710, 9500],
+                [7340, 8360, 8640, 8820, 9100]
+            ],
             tooltip: {
                 headerFormat: '<em>Expenses for the State {point.key}</em><br/>'
             }
@@ -101,10 +126,10 @@ function showData()
             color: Highcharts.getOptions().colors[0],
             type: 'scatter',
             data: [ // x, y positions where 0 is the first category
-                ['Indiana', 644],
-                [4, 718],
-                [4, 951],
-                [4, 969]
+                ['Indiana', 5014],
+                [4, 6018],
+                [4, 10051],
+                [4, 12069]
             ],
             marker: {
                 fillColor: 'white',

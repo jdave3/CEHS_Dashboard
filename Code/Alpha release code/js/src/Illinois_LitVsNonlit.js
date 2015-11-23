@@ -1,6 +1,10 @@
 var var_Litigated =[];
 var var_NonLitigated =[];
-
+function close_tutorial()
+{
+	document.getElementById("tutorial_backscreen").style.display = "none";
+	document.getElementById("tutorial_frontscreen").style.display = "none";
+}
 $(function () {
 	
 	var counter =0;
