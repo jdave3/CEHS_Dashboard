@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mean Comparison</title>
+<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/Navigation.css">
+	
+	<!--D3 -->
+    <script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	
+	<!--Jquery -->
+	<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+	<!--<script type="text/javascript" src="js/src/statemap.js"></script>
+	
+	<script type="text/javascript" src="js/src/cost_differential.js"></script>-->
+	
+	<!--Boot Strap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	
+	<script type="text/javascript" src="js/src/test.js"></script>
+
+	<div class = "pageheader">
+			<div class = "row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-1">
+				<img src="Images/logo1.png" style="height:85px;border:2px solid black; border-radius: 15px;">
+				</div>
+				<div class="col-md-4">
+					<h1>CEHS Dashboard
+					<br>
+					<div class="tagline">A better way to research</div>
+					</h1>
+				</div>
+
+			</div>
+		</div>
+		<div id='cssmenu'>
+			<ul>
+			<li><a href='tabluar_view_try'>Tabular Display</a></li>
+			<li><a href='State_Map_HIGHCHARTS.html'>State Map</a></li>
+			<li><a href='Cost_Differential.html'>Cost Differential</a></li>
+			<li><a href='Illinois_LitVsNonlit.html'>Litigated vs Non-Litigated</a></li>
+			<li class='active'><a href='BoxPlot.html'>Box Plot</a></li>
+			<li class=><a href='help.html'>Help</a></li>
+			</ul>
+		</div>
+
+
+</head>
+
+<body onload='load_data();'>
+<div id="container" style="height: 400px; margin: auto; min-width: 310px; max-width: 600px"></div>
+</body>
+</html>
