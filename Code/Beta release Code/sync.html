@@ -1,0 +1,121 @@
+<meta charset='utf-8'>
+<html>
+  <head>
+	<title>Litigated vs Non-Litigated</title>
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/Navigation.css">
+	
+	<!--D3 -->
+    <script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	
+	<!--Jquery -->
+	<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+	
+	<script type="text/javascript" src="js/src/sync.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+	
+	<!--Boot Strap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	
+	<div class = "pageheader">
+			<div class = "row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-1">
+				<img src="Images/logo1.png" style="height:85px;border:2px solid black; border-radius: 15px;">
+				</div>
+				<div class="col-md-4">
+					<h1>CEHS Dashboard
+					<br>
+					<div class="tagline">A better way to research</div>
+					</h1>
+				</div>
+
+			</div>
+		</div>
+		<div id='cssmenu'>
+			<ul>
+			<li><a href='home.html'>Home</a></li>
+			<li><a href='Cost_Differential.html'>Cost Differential</a></li>
+			<li><a href='Illinois_LitVsNonlit.html'>Litigated vs Non-Litigated</a></li>
+			<li><a href='State_Map.html'>State Map</a></li>
+			<li class='active'><a href='sync.html'>Summary</a></li>
+			<li><a href='tabluar_view.html'>Tabular View</a></li>
+			<li><a href='help.html'>Help</a></li>
+			</ul>
+		</div>
+</head>
+
+<body onload='filter_data_init();'>
+<table id="filtertable" class ="table" align="center">
+				<tr>
+				<td align="right">State1:</td>
+				<td align="left"><select id = "state_dropdown1">
+					<option value="">None</option>
+					<option value="Illinois" selected="selected">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Wisconsin">Wisconsin</option>
+				</select></td>
+				<td align="right">State2:</td>
+				<td align="left"><select id = "state_dropdown2">
+					<option value="">None</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana" selected="selected">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Wisconsin">Wisconsin</option>
+				</select></td>
+				<td align="right">State3:</td>
+				<td align="left"><select id = "state_dropdown3">
+					<option value="">None</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa" selected="selected">Iowa</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Wisconsin">Wisconsin</option>
+				</select></td>
+				<td align="right">State4:</td>
+				<td align="left"><select id = "state_dropdown4">
+					<option value="">None</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kentucky" selected="selected">Kentucky</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Wisconsin">Wisconsin</option>
+				</select></td>
+				<td align="right"><input type="button" value="Search" onclick = "filter_data();"></td>
+				</tr>
+
+				</table>
+<div>
+<div style="float: left; width: 33%;"><center>Indemnity Cost</center></div>
+<div style="float: left; width: 33%;"><center>Medical Cost</center></div>
+<div style="float: left; width: 33%;"><center>Expense Cost</center></div>
+</div>
+<div id="parent">
+<div id="container" style="float: left; width: 33%; text-align: center"></div>
+<div id="container1" style="float: left; width: 33%;"></div>
+<div id="container2" style="float: left; width: 33%;"></div>
+</div>
+
+  </body>
+</html>

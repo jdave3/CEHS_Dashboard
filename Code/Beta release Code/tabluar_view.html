@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+  <head>
+	<title>Tabular Display</title>
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/Navigation.css">
+	
+		<!--Jquery-->
+   <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+	
+	<script type="text/javascript" src="js/src/disp_table.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+	<!--D3 -->
+    <script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	<!--Jquery 
+	<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+	-->
+
+	
+	
+	<!--Boot Strap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<div class = "pageheader">
+			<div class = "row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-1">
+				<img src="Images/logo1.png" style="height:85px;border:2px solid black; border-radius: 15px;">
+				</div>
+				<div class="col-md-4">
+					<h1>CEHS Dashboard
+					<br>
+					<div class="tagline">A better way to research</div>
+					</h1>
+				</div>
+
+			</div>
+		</div>
+		
+		<div id='cssmenu'>
+			<ul>
+			<li><a href='home.html'>Home</a></li>
+			<li><a href='Cost_Differential.html'>Cost Differential</a></li>
+			<li><a href='Illinois_LitVsNonlit.html'>Litigated vs Non-Litigated</a></li>
+			<li><a href='State_Map.html'>State Map</a></li>
+			<li><a href='sync.html'>Summary</a></li>
+			<li class='active'><a href='tabluar_view.html'>Tabular View</a></li>
+			<li><a href='help.html'>Help</a></li>
+			</ul>
+		</div>
+  </head>
+  <body onload='disp_table();'>
+	<div class="container-fluid">
+		
+		
+		<div class = "row">
+
+				<div id = "filtertablediv" >
+				<table id="filtertable" class ="table" align="center">
+				<tr>
+				<td align="right">Body Part:</td>
+				<td align="left"><input type="text" name="BodyPart" id="BodyPart" value=""></td>
+				<td align="right">State:</td>
+				<td align="left"><select id = "state_dropdown">
+					<option value="All">All</option>
+					<option value="Illinois">Illinois</option>
+					<option value="Indiana">Indiana</option>
+					<option value="Iowa">Iowa</option>
+					<option value="Kentucky">Kentucky</option>
+					<option value="Michigan">Michigan</option>
+					<option value="Missouri">Missouri</option>
+					<option value="Wisconsin">Wisconsin</option>
+				</select></td>
+				<td align="right">Year:</td>
+				<td align="left"><select id = "year_dropdown">
+					<option value="All">All</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+				</select></td>
+				<td align="right">Legal Indicator:</td>
+				<td colspan =2 align="left"><input type="radio" name="LegalInd" value="Y" >Litigated
+				<input type="radio" name="LegalInd" value="N" >Non-Litigated
+				<input type="radio" name="LegalInd" value="All" checked>All</td>
+				<td align="right"><input type="button" value="Search" onclick = "filter_table();"></td>
+				</tr>
+				<tr>
+					<td colspan =3 align="right"> &nbsp </td>
+					<td colspan =3 align="center"><p id="searchComplete" style="color:blue;font-weight: bold;"><b></b></p></td>
+					<td colspan =4 align="right"><a href="tabluar_view.html">Reset Filters</a>
+					<!--<td colspan =4 align="right"><input type="button" value="Search" onclick = "filter_table();"></td>
+					<input type="button" value="Reset Filters" onclick = "location.href='tabluar_view_try.html'"> -->
+					</td>
+					
+				</tr>
+				</table>
+				</div>
+		</div>
+		<!-- <hr style= "border-top: 1px solid #123455;"> -->
+		<div id= "tablecontainer" class = "row" style= "border: 1px black solid;">
+		<!-- <center><h4 style="color:blue;">&nbspLoading: We assure you, it's worth the wait!</h4></center>
+		-->
+		</div>
+	</div>
+	<br>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<meta charset='utf-8'>
+<html>
+  <head>
+	<title>State Map</title>
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/Navigation.css">
+	
+	<!--D3 -->
+    <script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	
+	<!--Jquery -->
+	<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+	
+	<script type="text/javascript" src="js/src/statemap_HIGHCHARTS.js"></script>
+	<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+	<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+	<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/mapdata/countries/us/custom/us-small.js"></script>
+	
+	<!--Boot Strap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	
+	<div class = "pageheader">
+			<div class = "row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-1">
+				<img src="Images/logo1.png" style="height:85px;border:2px solid black; border-radius: 15px;">
+				</div>
+				<div class="col-md-4">
+					<h1>CEHS Dashboard
+					<br>
+					<div class="tagline">A better way to research</div>
+					</h1>
+				</div>
+
+			</div>
+		</div>
+		<div id='cssmenu'>
+			<ul>
+			<li><a href='home.html'>Home</a></li>
+			<li><a href='Cost_Differential.html'>Cost Differential</a></li>
+			<li><a href='Illinois_LitVsNonlit.html'>Litigated vs Non-Litigated</a></li>
+			<li class='active'><a href='State_Map.html'>State Map</a></li>
+			<li><a href='sync.html'>Summary</a></li>
+			<li><a href='tabluar_view.html'>Tabular View</a></li>
+			<li><a href='help.html'>Help</a></li>
+			</ul>
+		</div>
+</head>
+
+<body>
+<br>
+<div id = "parent">
+<div id="container" style="float: left; width: 35%;"> <center><h4 style="color:blue">&nbspLoading: Summarizing 0.4 million claims!</h4>
+				</center></div>
+<div id="table-div" style="float: left;width: 65%;"></div>
+</div>
+
+
+
+  </body>
+</html>

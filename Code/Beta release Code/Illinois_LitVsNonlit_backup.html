@@ -1,0 +1,83 @@
+<meta charset='utf-8'>
+<html>
+  <head>
+	<title>Litigated vs Non-Litigated</title>
+	<link rel="stylesheet" href="css/mystyle.css">
+	<link rel="stylesheet" href="css/Navigation.css">
+	
+	<!--D3 -->
+    <script type="text/javascript" src="js/lib/d3.min.js"></script>
+	
+	
+	<!--Jquery -->
+	<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/src/script.js"></script>
+	
+	<script type="text/javascript" src="js/src/Illinois_LitVsNonlit.js"></script>
+	<script src="https://code.highcharts.com/stock/highstock.js"></script>
+	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+	
+	<!--Boot Strap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	
+	<div class = "pageheader">
+			<div class = "row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-1">
+				<img src="Images/logo1.png" style="height:85px;border:2px solid black; border-radius: 15px;">
+				</div>
+				<div class="col-md-4">
+					<h1>CEHS Dashboard
+					<br>
+					<div class="tagline">A better way to research</div>
+					</h1>
+				</div>
+
+			</div>
+		</div>
+		<div id='cssmenu'>
+			<ul>
+			<li><a href='home.html'>Home</a></li>
+			<li><a href='tabluar_view_try.html'>Tabular Display</a></li>
+			<li><a href='State_Map_HIGHCHARTS.html'>State Map</a></li>
+			<li><a href='Cost_Differential.html'>Cost Differential</a></li>
+			<li class='active'><a href='Illinois_LitVsNonlit.html'>Litigated vs Non-Litigated</a></li>
+			<li><a href='BoxPlot.html'>Box Plot</a></li>
+			<li class=><a href='help.html'>Help</a></li>
+			</ul>
+		</div>
+</head>
+
+<body>
+<br>
+<div id="tutorial_backscreen" style="width:99%;height:450px;z-index:500;background-color:black;opacity:0.75;position:absolute;margin-bottom:-600px;"></div>
+  <div id="tutorial_frontscreen" style="position:fixed;background-color:white;margin:25%;margin-top:50px;border-radius:4px;z-index:500;margin-bottom:-600px;padding:4px">
+	<h4>&nbspInstructions:</h4>
+	<ol>
+		<li>On the top left are the zoom filters which can be applied to pan selected period. For instance: 1m = 1 month, 1y= 1 year.</li>
+		<li>On the top-right, users can manually enter 'start' date and press enter followed by 'To' date in chronological order and hit enter to view data for a specific date range.</li>
+		<li>Hovering over any point on time series will show point in time look of total cost for litigated cases and non-litigated cases.</li>
+		<li>Moreover, user can also select range using the navigator below the graph. Use the resizable rectangular window to select date range.</li>
+		<li>Clicking on save button, enables user to save the visualization displayed on screen.</li>
+	</ol>
+	<center><h5 style="color:red">Note: If you want to revisit these instructions, click on the section named: 'Litigated vs Non-Litigated'</h5></center>
+  <center><input type="button" value="close" onclick = "close_tutorial();"></center>
+  </div>
+<br>
+<div id = "parent">
+<div id="left" style="float: left;width: 30%; background-color: #E9EAED;padding: 5px; "> 
+	<h4><u>Description:</u></h4>
+	<p>A multiple series comparison chart showing the variation Total costs of Illinois state based on Litigated cases vs Non-Litigated cases. </p>
+</div>
+<div id="container" style="float: left; width: 60%;">  <center><h4 style="color:blue">&nbsp&nbsp&nbspLoading a beautiful series comparision plot.. </h4></center></div>
+<div id="right" style="float: left; width: 10%;"> &nbsp </div>
+</div>
+
+  </body>
+</html>
