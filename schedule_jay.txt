@@ -13,3 +13,13 @@ Schedule and deliverable for Mid-Target:
 - Make changes to the state map to address previous release issues -- Mon 11/16 by 5pm (estimate: 4 hrs)
 - Create Litigated Vs Non-Litigated comparision map for Illinois state -- Wed 11/20 by 5pm (estimate:11 hrs)
 
+
+Schedule and deliverable for High-Target:
+
+- state map: improve data to ink ratio -- Mon 12/2 by 5pm (estimate: 2 hrs)
+- tabular view: filter redesign -- Mon 12/2 by 5pm (estimate: 1 hrs)
+- Tabular view broken link on all pages -- Mon 12/2 by 5pm (estimate: 0.5 hrs)
+- Litigated vs non-litigated: 6m always highlighted -- Mon 12/2 by 5pm (estimate: 2 hrs)
+- Instruction: too much information -- Mon 12/2 by 5pm (estimate: 0.5 hrs)
+- Summary Visual -- Mon 12/3 by 5pm (estimate: 8 hrs)
+- Litigated Vs Non-Litigated: improve data to ink ratio -- Mon 12/2 by 5pm (estimate: 2 hrs)
